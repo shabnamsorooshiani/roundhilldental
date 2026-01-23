@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_blocks_imagesses",
+  "info": {
+    "displayName": "imagess"
+  },
+  "options": {},
+  "attributes": {
+    "imagee": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

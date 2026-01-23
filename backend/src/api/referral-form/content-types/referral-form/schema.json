@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "referral_forms",
+  "info": {
+    "singularName": "referral-form",
+    "pluralName": "referral-forms",
+    "displayName": "referralForm",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "string"
+    },
+    "ctaBtn": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.cta-btn"
+    }
+  }
+}

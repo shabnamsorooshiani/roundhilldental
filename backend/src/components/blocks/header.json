@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_blocks_headers",
+  "info": {
+    "displayName": "header",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "navlist": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.link"
+    },
+    "contactLink": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.link"
+    },
+    "servicesList": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.cta-btn"
+    }
+  }
+}

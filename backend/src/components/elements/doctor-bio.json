@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_elements_doctor_bios",
+  "info": {
+    "displayName": "doctorBio",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "photo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "name": {
+      "type": "string"
+    },
+    "profession": {
+      "type": "string"
+    },
+    "button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.cta-btn"
+    },
+    "bio": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "kind": "singleType",
+  "collectionName": "gallery_pages",
+  "info": {
+    "singularName": "gallery-page",
+    "pluralName": "gallery-pages",
+    "displayName": "galleryPage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.common-hero"
+    },
+    "titles": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.our-doctors"
+    },
+    "gallery": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.gallery-item"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.seo"
+    }
+  }
+}

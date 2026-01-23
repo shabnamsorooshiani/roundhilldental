@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_blocks_our_doctors",
+  "info": {
+    "displayName": "ourDoctors",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "text"
+    },
+    "subTitle": {
+      "type": "string"
+    }
+  }
+}

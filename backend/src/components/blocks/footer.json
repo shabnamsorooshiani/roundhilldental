@@ -1,0 +1,77 @@
+{
+  "collectionName": "components_blocks_footers",
+  "info": {
+    "displayName": "footer",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "desc": {
+      "type": "text"
+    },
+    "policyText": {
+      "type": "text"
+    },
+    "pageMenu": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.link"
+    },
+    "policyCompany": {
+      "type": "string"
+    },
+    "policyLink": {
+      "type": "string"
+    },
+    "socialLinks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.link"
+    },
+    "legalTitle": {
+      "type": "string"
+    },
+    "menuTitle": {
+      "type": "string"
+    },
+    "legalMenu": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.link"
+    },
+    "scheduleTitle": {
+      "type": "string"
+    },
+    "monday": {
+      "type": "string"
+    },
+    "mondaySchedule": {
+      "type": "string"
+    },
+    "tuesdayFriday": {
+      "type": "string"
+    },
+    "tuesdayFridaySchedule": {
+      "type": "string"
+    },
+    "saturday": {
+      "type": "string"
+    },
+    "saturdaySchedule": {
+      "type": "string"
+    },
+    "ctaButton": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.cta-btn"
+    }
+  }
+}

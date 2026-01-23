@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_blocks_high_tech_machins",
+  "info": {
+    "displayName": "highTechMachin"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "text"
+    },
+    "imagees": {
+      "displayName": "imagees",
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.imagees"
+    }
+  }
+}

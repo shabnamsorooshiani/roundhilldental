@@ -1,0 +1,51 @@
+{
+  "kind": "singleType",
+  "collectionName": "patient_infos",
+  "info": {
+    "singularName": "patient-info",
+    "pluralName": "patient-infos",
+    "displayName": "patient-info",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.common-hero"
+    },
+    "titles": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.our-doctors"
+    },
+    "cards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.section"
+    },
+    "termsAndConditions": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.our-doctors"
+    },
+    "insuranceDetails": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.section"
+    },
+    "insuranceProvider": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.section"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.seo"
+    }
+  }
+}

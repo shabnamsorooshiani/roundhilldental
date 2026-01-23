@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_blocks_testimonials",
+  "info": {
+    "displayName": "testimonials",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subTitle": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "text"
+    },
+    "testimonials": {
+      "displayName": "testimonial",
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.testimonial"
+    },
+    "decorationImages": {
+      "displayName": "image",
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.image"
+    }
+  }
+}

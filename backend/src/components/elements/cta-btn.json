@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_elements_cta_btns",
+  "info": {
+    "displayName": "ctaBtn"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "url": {
+      "type": "text"
+    },
+    "icon": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

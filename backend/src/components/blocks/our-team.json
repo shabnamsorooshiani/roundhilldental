@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_blocks_our_teams",
+  "info": {
+    "displayName": "OurTeam"
+  },
+  "options": {},
+  "attributes": {
+    "photo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "name": {
+      "type": "string"
+    },
+    "profession": {
+      "type": "string"
+    },
+    "button": {
+      "displayName": "button",
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.button"
+    },
+    "bio": {
+      "type": "text"
+    }
+  }
+}

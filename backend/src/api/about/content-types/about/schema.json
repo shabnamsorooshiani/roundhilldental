@@ -1,0 +1,62 @@
+{
+  "kind": "singleType",
+  "collectionName": "abouts",
+  "info": {
+    "singularName": "about",
+    "pluralName": "abouts",
+    "displayName": "About",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.common-hero"
+    },
+    "aboutUs": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.section"
+    },
+    "doctorsSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.our-doctors"
+    },
+    "testimonials": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.testimonials"
+    },
+    "advantages": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.advantages"
+    },
+    "ctaSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.cta-section"
+    },
+    "aboutDoctor": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.doctor-bio"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.seo"
+    },
+    "OurTeam": {
+      "displayName": "OurTeam",
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.our-team"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_blocks_insurance_sections",
+  "info": {
+    "displayName": "insuranceSection",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "tag": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "subTitle": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "text"
+    },
+    "logos": {
+      "displayName": "logos",
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.logos"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

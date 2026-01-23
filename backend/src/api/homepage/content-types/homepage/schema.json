@@ -1,0 +1,98 @@
+{
+  "kind": "singleType",
+  "collectionName": "homepages",
+  "info": {
+    "singularName": "homepage",
+    "pluralName": "homepages",
+    "displayName": "homepage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.hero"
+    },
+    "ourFeatures": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.icon-elem"
+    },
+    "insuranceSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.insurance-section"
+    },
+    "servicesTitle": {
+      "type": "string"
+    },
+    "servicesDesc": {
+      "type": "string"
+    },
+    "advantages": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.advantages"
+    },
+    "ctaSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.cta-section"
+    },
+    "aboutUs": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.section"
+    },
+    "ourMission": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.section"
+    },
+    "ourDoctors": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.our-doctors"
+    },
+    "partners": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.logos"
+    },
+    "testimonials": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.testimonials"
+    },
+    "resources": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.resources-section"
+    },
+    "appointmentSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.appointment-section"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.seo"
+    },
+    "dortorSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.doctor-bio"
+    },
+    "highTechmachin": {
+      "displayName": "highTechMachin",
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.high-tech-machin"
+    }
+  }
+}

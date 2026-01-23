@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_blocks_sections",
+  "info": {
+    "displayName": "section"
+  },
+  "options": {},
+  "attributes": {
+    "mainTitle": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "desc": {
+      "type": "text"
+    },
+    "descList": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.icon-elem"
+    },
+    "button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.link"
+    }
+  }
+}

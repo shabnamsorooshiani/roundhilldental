@@ -1,0 +1,45 @@
+{
+  "collectionName": "components_elements_gallery_items",
+  "info": {
+    "displayName": "galleryItem"
+  },
+  "options": {},
+  "attributes": {
+    "beforeImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "afterImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "beforeTitle": {
+      "type": "string",
+      "default": "Before"
+    },
+    "afterTitle": {
+      "type": "string",
+      "default": "After"
+    },
+    "beforeDesc": {
+      "type": "text",
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat."
+    },
+    "afterDesc": {
+      "type": "text",
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat."
+    }
+  }
+}

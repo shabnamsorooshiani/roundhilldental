@@ -1,0 +1,1 @@
+RewriteRule ^/services/redirect-example-of-broken-link$ https://roundhilldental.com/services [R=308,L]

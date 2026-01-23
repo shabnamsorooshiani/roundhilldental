@@ -1,0 +1,59 @@
+{
+  "collectionName": "components_seo_seos",
+  "info": {
+    "displayName": "seo"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "text"
+    },
+    "ogTitle": {
+      "type": "string"
+    },
+    "ogDesc": {
+      "type": "text"
+    },
+    "ogImage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "ogUrl": {
+      "type": "string"
+    },
+    "twitterTitle": {
+      "type": "string"
+    },
+    "twitterDesc": {
+      "type": "text"
+    },
+    "twitterCard": {
+      "type": "string"
+    },
+    "followThisPage": {
+      "type": "boolean"
+    },
+    "indexThisPage": {
+      "type": "boolean"
+    },
+    "twitterImage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "canonical": {
+      "type": "string"
+    },
+    "keywords": {
+      "type": "string"
+    }
+  }
+}
