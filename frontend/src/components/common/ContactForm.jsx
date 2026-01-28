@@ -1,10 +1,10 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import { makeAppointment } from "@/utils/apiCaller";
+import { hasSubmitted, inIframe, setCookie } from "@/utils/spam";
+import { useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { makeAppointment } from "@/utils/apiCaller";
-import { hasSubmitted, inIframe, setCookie } from "@/utils/spam";
 
 export default function ContactForm({ home }) {
   const form = useRef();
@@ -64,16 +64,20 @@ export default function ContactForm({ home }) {
           return;
         }
 
-        await makeAppointment(
-          `/emails?type=leads&to=${process.env.NEXT_PUBLIC_EMAIL_TO}`,
-          {
-            ...data,
-            patientPhone: data.patientPhone.replace(/\D/g, ""),
-            patientMessage: data.patientMessage.length
-              ? data.patientMessage
-              : "No message",
-          },
-        );
+      await makeAppointment(
+            process.env.NEXT_PUBLIC_EMAIL_URL,
+            {
+              subject: "New Appointment Request",
+              html: `
+                <h3>New Appointment Request</h3>
+                <p><strong>Name:</strong> ${data.patientName}</p>
+                <p><strong>Email:</strong> ${data.patientEmail}</p>
+                <p><strong>Phone:</strong> ${data.patientPhone.replace(/\D/g, "")}</p>
+                <p><strong>Service:</strong> ${data.patientService}</p>
+                <p><strong>Message:</strong> ${data.patientMessage || "No message"}</p>
+              `,
+            }
+      );
         toast("Thank you for contacting us!");
         setBtnDis(false);
         document.getElementById("mySubmit").disabled = true;
