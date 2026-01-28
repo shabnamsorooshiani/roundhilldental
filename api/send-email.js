@@ -16,7 +16,7 @@ export default async function handler(req, res) {
 
     const data = await resend.emails.send({
       from: 'onboarding@resend.dev', // or your verified domain
-      to,
+      to: process.env.RESEND_API_KEY,
       subject,
       html,
     });
