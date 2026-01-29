@@ -5,9 +5,12 @@ export const runtime = 'nodejs';
 const resend = new Resend(process.env.RESEND_TOKEN);
 
 const headers = {
-  'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Methods': 'POST, OPTIONS',
-  'Access-Control-Allow-Headers': 'Content-Type',
+  'Access-Control-Allow-Origin': 'https://roundhilldental.com',
+  'Access-Control-Allow-Methods': 'GET, POST, PUT, PATCH, DELETE, OPTIONS',
+  'Access-Control-Allow-Headers': 'Origin, Content-Type, Accept, Authorization',
+  'Access-Control-Expose-Headers': 'Content-Length',
+  'Access-Control-Allow-Credentials': 'true',
+  'Access-Control-Max-Age': '43200',
 };
 
 export async function OPTIONS() {
