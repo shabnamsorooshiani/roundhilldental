@@ -66,7 +66,8 @@ export default function ContactForm({ home }) {
 
       await makeAppointment(
             process.env.NEXT_PUBLIC_EMAIL_URL,
-            {
+        {
+              to: process.env.NEXT_PUBLIC_EMAIL_TO,
               subject: "New Appointment Request",
               html: `
                 <h3>New Appointment Request</h3>
