@@ -1,4 +1,3 @@
-import React from "react";
 import { imageResolver } from "@/utils/image-resolver";
 
 export default function Forms({ data, cards }) {
@@ -28,7 +27,11 @@ export default function Forms({ data, cards }) {
                 <p className="desc my-5">{item?.title}</p>
                 <p className="mb-6">{item?.desc}</p>
                 <a
-                  href={item?.button?.url}
+                  href={
+                    item?.button?.name === "Spanish Patent Form"
+                      ? "https://akku4ojhingudehn.public.blob.vercel-storage.com/media/uploads/NEW_PATIENT_FORM_SPANSIH_9287071e7e.pdf"
+                      : "https://akku4ojhingudehn.public.blob.vercel-storage.com/media/uploads/New_Patient_Form_English_3c3a9daeed.pdf"
+                  }
                   target="_blank"
                   className="center gap-2 text-white rounded-[50px] py-2 px-6 text-[16px] sm:text-[18px] bg-dark-bl max-w-[250px]"
                 >
