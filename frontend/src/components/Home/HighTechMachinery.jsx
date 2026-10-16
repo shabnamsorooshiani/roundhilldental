@@ -2,6 +2,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import Image from "next/image";
+import { imageResolver } from "@/utils/image-resolver";
 
 // Import Swiper styles
 import "swiper/css";
@@ -36,8 +37,10 @@ function HighTechMachinery({ data }) {
       <div className="relative md:pr-[80px]">
         <Swiper {...config}>
           {data?.imagees?.map((item, index) => {
-            const imageData = item?.imagee?.data[0]?.attributes;
+            const imageData = item?.imagee?.data?.[0]?.attributes;
             if (!imageData) return null;
+            const image = imageResolver({ data: { attributes: imageData } });
+            if (!image.path || !image.width || !image.height) return null;
 
             return (
               <SwiperSlide
@@ -45,10 +48,10 @@ function HighTechMachinery({ data }) {
                 key={index}
               >
                 <Image
-                  src={imageData.url}
-                  alt={imageData.alternativeText || "machine"}
-                  width={imageData.width}
-                  height={imageData.height}
+                  src={image.path}
+                  alt={image.alt || "machine"}
+                  width={image.width}
+                  height={image.height}
                   className="object-cover rounded-3xl"
                 />
               </SwiperSlide>

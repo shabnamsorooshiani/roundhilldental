@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { imageResolver } from "@/utils/image-resolver";
 
 const BlogBody = ({ data, cusClass }) => {
   let content = data?.body || data?.attributes?.body || data;
@@ -10,9 +11,8 @@ const BlogBody = ({ data, cusClass }) => {
     el.innerHTML = content;
     let images = el.getElementsByTagName("img");
     for (let image of images) {
-      image.src = `https://happykidsweb.blob.core.windows.net/media/uploads/${
-        image.src.split("/")[image.src.split("/").length - 1]
-      }`;
+      const resolvedPath = imageResolver(image.getAttribute("src") || "").path;
+      if (resolvedPath) image.src = resolvedPath;
     }
     finalContent = el.innerHTML;
     setFinalData(finalContent);

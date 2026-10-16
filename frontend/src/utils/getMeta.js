@@ -1,4 +1,5 @@
 import { adminPath } from "./constants";
+import { imageResolver } from "./image-resolver";
 
 export async function generateMetadata() {
   const product = await fetch(`${adminPath}/homepage?populate=deep`)
@@ -12,7 +13,7 @@ export async function generateMetadata() {
     openGraph: {
       title: product?.ogTitle,
       description: product?.ogDesc,
-      images: `https://blob.roundhilldental.com/media${product?.ogUrl}`,
+      images: imageResolver(product?.ogUrl).path,
     },
     robots: {
       index: product?.indexThisPage,

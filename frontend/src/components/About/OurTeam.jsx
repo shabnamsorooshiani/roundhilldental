@@ -202,7 +202,9 @@ export default function OurDoctors({ data }) {
           <div className="max-w-[950px] mx-auto relative">
             <ul className="mt-[80px] grid gap-40 md:grid-cols-2 md:gap-8">
               {data?.OurTeam?.map((item, index) => {
-                const imageData = item?.photo?.data[0]?.attributes;
+                const imageData = item?.photo?.data?.[0]?.attributes;
+                const image = imageResolver(imageData);
+                if (!image.path) return null;
                 return (
                   <li
                     key={index}
@@ -211,8 +213,8 @@ export default function OurDoctors({ data }) {
                   >
                     <div className="rounded-[14px] overflow-hidden">
                       <Image
-                        src={imageData.url}
-                        alt={item?.name}
+                        src={image.path}
+                        alt={image.alt || item?.name}
                         width={460}
                         height={650}
                         className="w-full h-auto"

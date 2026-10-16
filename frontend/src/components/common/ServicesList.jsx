@@ -3,9 +3,10 @@ import Image from "next/image";
 import { imageResolver } from "@/utils/image-resolver";
 
 export default function ServicesList({ qnt, serviceList }) {
+  console.log("serviceList", serviceList);
   return (
     <ul className="grid md:grid-cols-2 xl:grid-cols-3 mb-10 auto-rows-max">
-      {serviceList?.slice(0, qnt).map(({ attributes }, index) => {
+      {serviceList?.slice(0, qnt)?.map(({ attributes }, index) => {
         return (
           <li className="py-2 md:p-3 lg:p-5 bg-[#fff]" key={index}>
             <Link
