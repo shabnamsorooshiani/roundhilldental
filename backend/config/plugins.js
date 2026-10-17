@@ -1,15 +1,9 @@
 module.exports = ({ env }) => ({
   upload: {
     config: {
-      provider: "strapi-provider-upload-azure-storage",
+      provider: "strapi-provider-upload-vercel-blob",
       providerOptions: {
-        account: env("STORAGE_ACCOUNT"),
-        accountKey: env("STORAGE_ACCOUNT_KEY"),
-        serviceBaseURL: env("STORAGE_URL"),
-        containerName: env("STORAGE_CONTAINER_NAME"),
-        cdnBaseURL: env("STORAGE_CDN_URL"),
-        defaultPath: "uploads",
-        maxConcurrent: 10,
+        token: env("BLOB_READ_WRITE_TOKEN"),
       },
     },
   },

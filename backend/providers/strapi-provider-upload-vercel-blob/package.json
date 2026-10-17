@@ -1,0 +1,11 @@
+{
+  "name": "strapi-provider-upload-vercel-blob",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Strapi upload provider that stores media in Vercel Blob",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@vercel/blob": "2.8.0"
+  }
+}

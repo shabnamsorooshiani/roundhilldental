@@ -14,7 +14,6 @@
     "strapi": "strapi"
   },
   "dependencies": {
-    "@azure/storage-blob": "^12.17.0",
     "@strapi/plugin-cloud": "4.17.1",
     "@strapi/plugin-i18n": "4.17.1",
     "@strapi/plugin-users-permissions": "4.17.1",
@@ -25,7 +24,7 @@
     "react-dom": "^18.0.0",
     "react-router-dom": "5.3.4",
     "strapi-plugin-populate-deep": "^3.0.1",
-    "strapi-provider-upload-azure-storage": "3.3.0",
+    "strapi-provider-upload-vercel-blob": "file:providers/strapi-provider-upload-vercel-blob",
     "styled-components": "5.3.3"
   },
   "engines": {

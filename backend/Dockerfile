@@ -6,6 +6,7 @@ WORKDIR /home/app
 
 COPY package.json ./
 COPY yarn.lock ./
+COPY providers ./providers
 
 RUN yarn install --frozen-lockfile
 
@@ -15,28 +16,17 @@ RUN yarn run build
 
 FROM node:20.19-alpine AS runner
 
-RUN apk --no-cache add apache2 openssh-server && \
-  echo "root:Docker!" | chpasswd && \
-  ssh-keygen -A
+WORKDIR /home/app
 
-COPY --from=builder /home/app/ssh/sshd_config /etc/ssh/.
-COPY --from=builder /home/app/ssh/start.sh start.sh
 COPY --from=builder /home/app/node_modules /home/app/node_modules
 COPY --from=builder /home/app/build /home/app/build
-# COPY --from=builder /home/app/.cache /home/app/.cache
 COPY --from=builder /home/app/package.json /home/app/package.json
 COPY --from=builder /home/app/favicon.ico /home/app/favicon.ico
 COPY --from=builder /home/app/public /home/app/public
 COPY --from=builder /home/app/config /home/app/config
-# COPY --from=builder /home/app/data /home/app/data
 COPY --from=builder /home/app/database /home/app/database
 COPY --from=builder /home/app/src /home/app/src
 
-RUN chmod +x ./start.sh
+EXPOSE 1337
 
-EXPOSE 80 2222
-
-CMD ["./start.sh"]
-
-# docker build -t node:20.19-alpine --no-cache .
-# docker run -d -p 80:80 -p 2222:2222 node:20.19-alpine
+CMD ["npm", "run", "start"]
