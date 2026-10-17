@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
-import Head from "next/head";
 import { adminPath } from "@/utils/constants";
 import Layout from "@/components/common/Layout";
+import Seo from "@/components/common/Seo";
 import Hero from "@/components/Home/Hero";
 const AboutUs = dynamic(() => import("@/components/Home/AboutUs"), {
   ssr: false,
@@ -51,10 +51,11 @@ export default function Home({
   return (
     <>
       <Layout layoutData={layoutData}>
-        <Head>
-          <title>HOME | ROUND HILL</title>
-          <meta name="description" content="ROUND HILL by Vigorant" />
-        </Head>
+        <Seo
+          seo={pageData?.seo}
+          title="Round Hill Dental | Dentist in Tracy, CA"
+          path="/"
+        />
         <Hero data={pageData?.hero} />
         <Features data={pageData?.ourFeatures} />
         <Insurance data={pageData?.insuranceSection} />

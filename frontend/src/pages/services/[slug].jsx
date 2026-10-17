@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
-import Head from "next/head";
 import { adminPath } from "@/utils/constants";
 import Layout from "@/components/common/Layout";
+import Seo from "@/components/common/Seo";
 const ServicePage = dynamic(() => import("@/components/Services/ServicePage"), {
   ssr: false,
 });
@@ -10,10 +10,12 @@ export default function Service({ singleService, layoutData }) {
   return (
     <>
       <Layout layoutData={layoutData}>
-        <Head>
-          <title>SERVICE | ROUND HILL</title>
-          <meta name="description" content="ROUND HILL by Vigorant" />
-        </Head>
+        <Seo
+          seo={singleService?.seo}
+          title={`${singleService?.title} | Round Hill Dental`}
+          description={singleService?.cardDesc}
+          path={`/services/${singleService?.slug}`}
+        />
         <ServicePage data={singleService} />
       </Layout>
     </>

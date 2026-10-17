@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
-import Head from "next/head";
 import { adminPath } from "@/utils/constants";
 import Layout from "@/components/common/Layout";
+import Seo from "@/components/common/Seo";
 const Forms = dynamic(() => import("@/components/PatientInfo/Forms"), {
   ssr: false,
 });
@@ -24,10 +24,11 @@ export default function PatientInfo({ layoutData, pageData }) {
   return (
     <>
       <Layout layoutData={layoutData}>
-        <Head>
-          <title>PATIENT INFO | ROUND HILL</title>
-          <meta name="description" content="ROUND HILL by Vigorant" />
-        </Head>
+        <Seo
+          seo={pageData?.seo}
+          title="Patient Information | Round Hill Dental"
+          path="/patient-info"
+        />
         <Hero data={pageData?.hero} />
         <Forms data={pageData?.titles} cards={pageData?.cards} />
         <Insurance data={pageData?.insuranceDetails} />

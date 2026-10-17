@@ -1,16 +1,17 @@
 import Layout from "@/components/common/Layout";
 import { adminPath } from "@/utils/constants";
 import { imageResolver } from "@/utils/image-resolver";
-import Head from "next/head";
+import Seo from "@/components/common/Seo";
 
 export default function ReferralForm({ layoutData, pageData }) {
   return (
     <>
       <Layout layoutData={layoutData}>
-        <Head>
-          <title>REFERRAL FORM | ROUND HILL</title>
-          <meta name="description" content="ROUND HILL by Vigorant" />
-        </Head>
+        <Seo
+          title="Refer a Friend | Round Hill Dental Tracy, CA"
+          description="Refer friends and family to Round Hill Dental in Tracy, CA and help them get advanced, caring dental treatment and a confident, healthy smile."
+          path="/referral-form"
+        />
         <section className="referral-bg">
           <div className="center flex-col text-center pt-[200px] pb-[150px]">
             <h1 className="font-bold text-[40px] sm:text-[60px] max-w-[800px] px-5">

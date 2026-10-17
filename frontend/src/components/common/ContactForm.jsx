@@ -64,12 +64,10 @@ export default function ContactForm({ home }) {
           return;
         }
 
-      await makeAppointment(
-            process.env.NEXT_PUBLIC_EMAIL_URL,
-        {
-              to: process.env.NEXT_PUBLIC_EMAIL_TO,
-              subject: "New Appointment Request",
-              html: `
+        await makeAppointment(process.env.NEXT_PUBLIC_EMAIL_URL, {
+          to: process.env.NEXT_PUBLIC_EMAIL_TO,
+          subject: "New Appointment Request",
+          html: `
                 <h3>New Appointment Request</h3>
                 <p><strong>Name:</strong> ${data.patientName}</p>
                 <p><strong>Email:</strong> ${data.patientEmail}</p>
@@ -77,8 +75,7 @@ export default function ContactForm({ home }) {
                 <p><strong>Service:</strong> ${data.patientService}</p>
                 <p><strong>Message:</strong> ${data.patientMessage || "No message"}</p>
               `,
-            }
-      );
+        });
         toast("Thank you for contacting us!");
         setBtnDis(false);
         document.getElementById("mySubmit").disabled = true;

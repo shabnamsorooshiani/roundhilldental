@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
-import Head from "next/head";
 import { adminPath } from "@/utils/constants";
 import Layout from "@/components/common/Layout";
+import Seo from "@/components/common/Seo";
 const GalleryList = dynamic(() => import("@/components/Gallery/GalleryList"), {
   ssr: false,
 });
@@ -11,10 +11,11 @@ export default function Gallery({ layoutData, pageData }) {
   return (
     <>
       <Layout layoutData={layoutData}>
-        <Head>
-          <title>GALLERY | ROUND HILL</title>
-          <meta name="description" content="ROUND HILL by Vigorant" />
-        </Head>
+        <Seo
+          seo={pageData?.seo}
+          title="Smile Gallery | Round Hill Dental"
+          path="/gallery"
+        />
         <Hero data={pageData?.hero} />
         <GalleryList data={pageData?.titles} gallery={pageData?.gallery} />
       </Layout>

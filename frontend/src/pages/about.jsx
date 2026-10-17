@@ -1,8 +1,8 @@
 "use client";
 import dynamic from "next/dynamic";
-import Head from "next/head";
 import { adminPath } from "@/utils/constants";
 import Layout from "@/components/common/Layout";
+import Seo from "@/components/common/Seo";
 const Hero = dynamic(() => import("@/components/About/Hero"), { ssr: false });
 const About = dynamic(() => import("@/components/About/About"), { ssr: false });
 const WhyWe = dynamic(() => import("@/components/common/WhyWe"), {
@@ -22,10 +22,11 @@ export default function AboutUs({ pageData, testimonials, layoutData }) {
   return (
     <>
       <Layout layoutData={layoutData}>
-        <Head>
-          <title>ABOUT | ROUND HILL</title>
-          <meta name="description" content="ROUND HILL by Vigorant" />
-        </Head>
+        <Seo
+          seo={pageData?.seo}
+          title="About Us | Round Hill Dental"
+          path="/about"
+        />
         <Hero data={pageData?.hero} />
         <About data={pageData?.aboutUs} />
         <WhyWe data={pageData?.advantages} />

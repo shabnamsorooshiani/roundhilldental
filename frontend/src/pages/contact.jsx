@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
-import Head from "next/head";
 import { adminPath } from "@/utils/constants";
 import Layout from "@/components/common/Layout";
+import Seo from "@/components/common/Seo";
 const AskQuestion = dynamic(
   () => import("@/components/ContactUs/AskQuestion"),
   { ssr: false },
@@ -20,10 +20,11 @@ export default function Contact({ layoutData, pageData }) {
   return (
     <>
       <Layout layoutData={layoutData}>
-        <Head>
-          <title>CONTACT US | ROUND HILL</title>
-          <meta name="description" content="ROUND HILL by Vigorant" />
-        </Head>
+        <Seo
+          seo={pageData?.seo}
+          title="Contact Us | Round Hill Dental"
+          path="/contact"
+        />
         <Hero data={pageData?.hero} />
         <BookAppointment data={pageData?.appointment} />
         <AskQuestion />
